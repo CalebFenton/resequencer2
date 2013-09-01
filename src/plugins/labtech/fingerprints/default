@@ -1,0 +1,21 @@
+[
+  {
+    "Name": "testfp",
+    "Enabled": true,
+    "MinSDK": 0,
+    "Regions": [
+      {
+        "Name": "test",
+        "BeginPattern": "",
+        "EndPattern": "",
+        "Operations": [
+          {
+            "Type": "MATCH",
+            "Name": "optest",
+            "Value": ".*"
+          }
+        ]
+      }
+    ]
+  }
+]

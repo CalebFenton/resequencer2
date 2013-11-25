@@ -4,7 +4,6 @@ import java.io.InputStream;
 import java.util.List;
 
 import net.xeoh.plugins.base.Plugin;
-import resequencer.ResourceContext;
 
 public interface ResequencerPlugin extends Plugin {
     public String getName();
@@ -13,13 +12,13 @@ public interface ResequencerPlugin extends Plugin {
 
     public String getVersion();
 
-    public void beforeDecompile(ResourceContext context);
+    public void beforeDecompile(String apkPath, String dexPath);
 
-    public void beforeResequence(ResourceContext context);
+    public void beforeResequence(String smaliDir);
 
-    public void beforeCompile(ResourceContext context);
+    public void beforeCompile(String smaliDir);
 
-    public void beforeExit(ResourceContext context);
+    public void beforeRepackage(String apkPath, String dexPath);
 
     public List<InputStream> getFingerprints();
 

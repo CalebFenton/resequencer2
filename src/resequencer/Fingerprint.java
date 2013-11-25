@@ -3,72 +3,72 @@ package resequencer;
 import java.util.List;
 
 public class Fingerprint {
-    private final String Name;
-    private final boolean Enabled;
-    private final String[] InstallHooks;
-    private final int MinSDK;
-    private final String[] RequireFPs;
-    private final String[] IncompatibleFPs;
-    private final List<MatchOperation> MatchOperations;
-    private final List<InjectOperation> InjectOperations;
-    private final List<RecodeOperation> RecodeOperations;
+    private final String name;
+    private final boolean disabled;
+    private final String[] hooks;
+    private final int minSDK;
+    private final String[] require;
+    private final String[] incompatible;
+    private final List<MatchOperation> matchOperations;
+    private final List<InjectOperation> injectOperations;
+    private final List<RecodeOperation> recodeOperations;
 
     public Fingerprint(String name) {
-        this(name, true, null, 0, null, null, null, null, null);
+        this(name, false, null, 0, null, null, null, null, null);
     }
 
     public Fingerprint(String name, List<MatchOperation> matchOperations, List<InjectOperation> injectOperations,
                     List<RecodeOperation> recodeOperations) {
-        this(name, true, null, 0, null, null, matchOperations, injectOperations, recodeOperations);
+        this(name, false, null, 0, null, null, matchOperations, injectOperations, recodeOperations);
     }
 
-    public Fingerprint(String name, boolean enabled, String[] installHooks, int minSDK, String[] requireFPs,
-                    String[] incompatibleFPs, List<MatchOperation> matchOperations,
+    public Fingerprint(String name, boolean disabled, String[] hooks, int minSDK, String[] require,
+                    String[] incompatibles, List<MatchOperation> matchOperations,
                     List<InjectOperation> injectOperations, List<RecodeOperation> recodeOperations) {
-        Name = name;
-        Enabled = enabled;
-        InstallHooks = installHooks;
-        MinSDK = minSDK;
-        RequireFPs = requireFPs;
-        IncompatibleFPs = incompatibleFPs;
-        MatchOperations = matchOperations;
-        InjectOperations = injectOperations;
-        RecodeOperations = recodeOperations;
+        this.name = name;
+        this.disabled = disabled;
+        this.hooks = hooks;
+        this.minSDK = minSDK;
+        this.require = require;
+        this.incompatible = incompatibles;
+        this.matchOperations = matchOperations;
+        this.injectOperations = injectOperations;
+        this.recodeOperations = recodeOperations;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public boolean isEnabled() {
-        return Enabled;
+        return disabled;
     }
 
     public String[] getInstallHooks() {
-        return InstallHooks;
+        return hooks;
     }
 
     public int getMinSDK() {
-        return MinSDK;
+        return minSDK;
     }
 
     public String[] getRequireFPs() {
-        return RequireFPs;
+        return require;
     }
 
     public String[] getIncompatibleFPs() {
-        return IncompatibleFPs;
+        return incompatible;
     }
 
     public List<MatchOperation> getMatchOperations() {
-        return MatchOperations;
+        return matchOperations;
     }
 
     public List<InjectOperation> getInjectOperations() {
-        return InjectOperations;
+        return injectOperations;
     }
 
     public List<RecodeOperation> getRecodeOperations() {
-        return RecodeOperations;
+        return recodeOperations;
     }
 }

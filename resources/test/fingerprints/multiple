@@ -1,0 +1,24 @@
+[
+  {
+    "name": "FP 1",
+    "disabled": true,
+    "minSDK": 1,
+    "matchOperations": [
+      {
+        "target": "const-string [vp]\\d+, \\\"(.*?)\\\"",
+        "name": "optest"
+      }
+    ]
+  },
+  {
+    "name": "FP 2",
+    "disabled": false,
+    "minSDK": 0,
+    "matchOperations": [
+      {
+        "target": "const v.*",
+        "name": "optest2"
+      }
+    ]
+  }
+]

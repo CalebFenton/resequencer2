@@ -1,35 +1,35 @@
 package resequencer;
 
 public abstract class Operation {
-    private String Name;
-    private String Before;
-    private String Inside;
-    private String After;
+    private String name;
+    private String before;
+    private String inside;
+    private String after;
 
     public Operation() {
 
     }
 
     public Operation(String name, String before, String inside, String after) {
-        Name = name;
-        Before = before;
-        Inside = inside;
-        After = after;
+        this.name = name;
+        this.before = before;
+        this.inside = inside;
+        this.after = after;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public String getBefore() {
-        return Before;
+        return before;
     }
 
     public String getInside() {
-        return Inside;
+        return inside;
     }
 
     public String getAfter() {
-        return After;
+        return after;
     }
 }

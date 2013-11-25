@@ -4,16 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FingerprintStore {
-    public List<Fingerprint> fingerprints;
+    private List<Fingerprint> prints;
 
-    public FingerprintStore(List<Fingerprint> fingerprints) {
-        this.fingerprints = fingerprints;
+    public FingerprintStore() {
+        prints = new ArrayList<Fingerprint>();
+    }
+
+    public FingerprintStore(List<Fingerprint> prints) {
+        this.prints = prints;
+    }
+
+    public void addFingerprints(List<Fingerprint> prints) {
+        this.prints.addAll(prints);
     }
 
     public List<MatchOperation> getMatchOperations() {
         List<MatchOperation> results = new ArrayList<MatchOperation>();
 
-        for (Fingerprint f : fingerprints) {
+        for (Fingerprint f : prints) {
             for (MatchOperation op : f.getMatchOperations()) {
                 results.add(op);
             }

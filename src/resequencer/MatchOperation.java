@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
-
 public class MatchOperation extends Operation {
-    private final String Target;
+    private final String target;
 
     private transient int groupCount;
     private transient int groupOffset;
@@ -19,13 +18,13 @@ public class MatchOperation extends Operation {
     public MatchOperation(String name, String before, String inside, String after, String target) {
         super(name, before, inside, after);
 
-        Target = target;
+        this.target = target;
 
         groupCount = Pattern.compile(target).matcher("").groupCount();
     }
 
     public String getTarget() {
-        return Target;
+        return target;
     }
 
     public int getGroupCount() {

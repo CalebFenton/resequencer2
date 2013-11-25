@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Simple",
+    "disabled": true,
+    "minSDK": 0,
+    "matchOperations": [
+      {
+        "target": "const-string [vp]\\d+, \\\"(.*?)\\\"",
+        "name": "Strings"
+      },
+      {
+        "target": "const v.*",
+        "name": "Consts"
+      }
+    ]
+  }
+]

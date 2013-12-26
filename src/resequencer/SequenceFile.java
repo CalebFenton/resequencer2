@@ -5,12 +5,12 @@ import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 
-public class SmaliFile extends File {
+public class SequenceFile extends File {
     private static final long serialVersionUID = 2674346051117459428L;
 
     public String content;
 
-    public SmaliFile(final String path) throws IOException {
+    public SequenceFile(final String path) throws IOException {
         super(path);
 
         content = FileUtils.readFileToString(this);

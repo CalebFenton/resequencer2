@@ -8,7 +8,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class Main {
-    private static Logger log = Logger.getLogger(SmaliMatcher.class.getSimpleName());
+    private static Logger log = Logger.getLogger(SequenceMatcher.class.getSimpleName());
     private static Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     public static void main(String[] args) throws Exception {
@@ -21,10 +21,10 @@ public class Main {
          * 
          * FingerprintStore s = parseConfig(config); // System.out.println(gson.toJson(s));
          * 
-         * List<SmaliFile> files = new ArrayList<SmaliFile>(); SmaliFile sf = new
-         * SmaliFile("resources/test/smali/test1.smali"); System.out.println(sf.content); files.add(sf);
+         * List<SequenceFile> files = new ArrayList<SequenceFile>(); SequenceFile sf = new
+         * SequenceFile("resources/test/smali/test1.smali"); System.out.println(sf.content); files.add(sf);
          * 
-         * SmaliMatcher.execute(files, s.getMatchOperations());
+         * SequenceMatcher.execute(files, s.getMatchOperations());
          */
     }
 

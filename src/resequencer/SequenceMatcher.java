@@ -6,10 +6,10 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class SmaliMatcher {
-    private static Logger log = Logger.getLogger(SmaliMatcher.class.getSimpleName());
+public class SequenceMatcher {
+    private static Logger log = Logger.getLogger(SequenceMatcher.class.getSimpleName());
 
-    public static void execute(final List<SmaliFile> files, List<MatchOperation> ops) {
+    public static void execute(final List<SequenceFile> files, List<MatchOperation> ops) {
         HashMap<Integer, MatchOperation> opByGroup = new HashMap<Integer, MatchOperation>();
 
         int position = 2;
@@ -28,7 +28,7 @@ public class SmaliMatcher {
         log.info("master=" + masterSequence);
 
         Pattern p = Pattern.compile(masterSequence.toString());
-        for (SmaliFile file : files) {
+        for (SequenceFile file : files) {
             Matcher m = p.matcher(file.content);
 
             while (m.find()) {

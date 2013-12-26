@@ -43,7 +43,7 @@ public class MatchOperation extends Operation {
         this.groupOffset = groupOffset;
     }
 
-    public void addMatchResult(SmaliFile file, int start, int end, int group) {
+    public void addMatchResult(SequenceFile file, int start, int end, int group) {
         if (results == null) {
             // Gson uses InstanceCreator. Constructor is not called.
             results = new ArrayList<MatchResult>();

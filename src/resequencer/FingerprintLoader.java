@@ -18,10 +18,11 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 public class FingerprintLoader {
+    private static final Logger log = Logger.getLogger(SequenceMatcher.class.getSimpleName());
+    // private static final Encoding = ""
     private static final Type listOfPrints = new TypeToken<List<Fingerprint>>() {
     }.getType();
 
-    private static Logger log = Logger.getLogger(SmaliMatcher.class.getSimpleName());
     private static Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     public static FingerprintStore loadFingerprintsFromDirectory(String path) throws IOException {
@@ -30,6 +31,7 @@ public class FingerprintLoader {
         FingerprintStore store = new FingerprintStore();
         for (File file : files) {
             try {
+                // FileUtils.readFileToString(file, "UTF-8")
                 InputStream in = new FileInputStream(file);
                 store.addFingerprints(parseFingerprints(in));
             } catch (FileNotFoundException e) {
@@ -59,4 +61,9 @@ public class FingerprintLoader {
 
         return gson.fromJson(lines, listOfPrints);
     }
+
+    private static List<Fingerprint> parseFingerprints(String prints) throws IOException {
+        return gson.fromJson(prints, listOfPrints);
+    }
+
 }

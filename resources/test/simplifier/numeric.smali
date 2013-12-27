@@ -65,3 +65,15 @@
     :end
     return v2
 .end method
+
+.method public static infinite_depth()V
+    .locals 0
+
+    :place
+    goto :forever
+
+    :forever
+    goto :place
+
+    return-void
+.end method

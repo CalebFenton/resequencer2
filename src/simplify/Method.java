@@ -1,4 +1,4 @@
-package untangle;
+package simplify;
 
 import java.util.List;
 

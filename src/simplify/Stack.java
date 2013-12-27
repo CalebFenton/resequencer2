@@ -1,4 +1,4 @@
-package untangle;
+package simplify;
 
 public class Stack {
 

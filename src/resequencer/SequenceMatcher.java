@@ -14,10 +14,13 @@ public class SequenceMatcher {
 
         int position = 2;
         StringBuilder masterSequence = new StringBuilder("(");
+        // TODO: should op really care about it's groupoffset? why not maintain that outside of op
+        // then this can be extracted to a utility method for use in simplifier
         for (MatchOperation op : ops) {
             op.setGroupOffset(position);
 
             int endPosition = position + 1 + op.getGroupCount();
+            // TODO: this probably doesn't make sense as no subgroups will match unless the outer group does also
             for (; position < endPosition; position++) {
                 opByGroup.put(position, op);
             }

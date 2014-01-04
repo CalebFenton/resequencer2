@@ -3,6 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="lib/gson-2.2.4.jar" sourcepath="lib/gson-2.2.4-sources.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="jar:platform:/resource/resequencer2/lib/gson-2.2.4-javadoc.jar!/"/>
@@ -19,10 +20,24 @@
 			<attribute name="javadoc_location" value="jar:platform:/resource/resequencer2/lib/commons-io-2.4-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="lib/commons-lang3-3.1.jar" sourcepath="lib/commons-lang3-3.1-sources.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="jar:platform:/resource/resequencer2/lib/commons-lang3-3.1-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/dexlib2.jar" sourcepath="/smali/">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/resequencer2/lib/dexlib2-sources.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/smali.jar" sourcepath="/smali/smali">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/resequencer2/lib/smali-sources.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/baksmali.jar" sourcepath="/smali">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/resequencer2/lib/baksmali-sources.jar!/"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="bin"/>

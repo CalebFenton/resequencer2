@@ -115,3 +115,42 @@
     :cond_1
     return v0
 .end method
+
+.method public crazyloop(I)I
+    .locals 3
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 91
+    move v1, v0
+
+    .line 92
+    :goto_0
+    const/16 v2, 0xa
+
+    if-ge v1, v2, :cond_0
+
+    .line 93
+    add-int/lit8 v2, v0, 0x1
+
+    .line 92
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    move v0, v2
+
+    goto :goto_0
+
+    .line 96
+    :cond_0
+    if-lez v0, :cond_1
+
+    .line 97
+    add-int/2addr v0, v0
+
+    .line 99
+    :cond_1
+    return v0
+.end method

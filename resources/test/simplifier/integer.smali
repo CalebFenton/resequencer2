@@ -1,4 +1,4 @@
-.class public final Ltest;
+.class public final Linteger;
 .super Ljava/lang/Object;
 
 .method public static test1()I
@@ -9,7 +9,7 @@
 
     # stack = { v0 => [{value => java.lang.Integer, used => [], referenced => [8]}]
 	#         , v1 => [{value => 1, used => [], referenced = [12]}] }
-    const/16 v1, 0x1
+    const/4 v1, 0x1
 
     # stack = { v0 => [{value => java.lang.Integer(1), used => [], referenced => [8, 16]}]
 	#         , v1 => [{value => 1, used => [16], referenced = [12]}] }
@@ -39,7 +39,7 @@
 
     new-instance v0, Ljava/lang/Integer;
 
-    const/16 v1, 0x1
+    const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Ljava/lang/Integer;-><init>(I)V
 
